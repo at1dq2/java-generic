@@ -16,9 +16,15 @@ public class Wrong {
 	public static void main(String[] args) {
 		List<String> strings = Arrays.asList("one", "two");
 		String[] a = toArray(strings); // class cast error
+		
 		/*
-		String[] a = (String[])toArray(strings);
-		*/ 
+		 * right behavior
+		 Object a = toArray(strings); 
+		System.out.println(a.getClass().toString());
+		Object[] arrTemp = (Object[])a;
+		*/
+		
+		 
 	}
 
 }
